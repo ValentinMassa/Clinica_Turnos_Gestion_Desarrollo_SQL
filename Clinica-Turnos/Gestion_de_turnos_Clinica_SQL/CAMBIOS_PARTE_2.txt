@@ -1,0 +1,23 @@
+ENTREGA 3
+1 - Se agrego el collate Modern_Spanish_CI_AS al crear la base de datos,ya que esta maneja acentos.
+
+2. Se va usar Begin, commit y rollbac transaction, acompaniando de raiserror(), begin/end try, begin/end catch para manejar todos los erorres
+de manera mas controlada.
+
+
+3- Se agregaron todos los logins, usuarios y roles correspondientes y necesarios para la utilizacion de la base de datos
+
+4- Se corrigio la identacion y la logica de algunos SP.
+
+5- Se saco de la tabla Domicilio el Numero de calle y ahora se trata todo junto
+
+ENTREGA 4:
+-Se va usar Begin, commit y rollbac transaction, acompaniando de raiserror(), begin/end try, begin/end catch para manejar todos los erorres
+de manera mas controlada.
+-Se agrego la clausula 
+	ERRORFILE = '''+@pathErr+'\ERRORES_MEDICO.csv'', 
+	MAXERRORS = 20;
+
+	en bulk insert. 
+Ademas, se agrego en las tablas temporales controles de NULL y algunos CHECK, cosa que si hay null o no se cumpla el check, la base de datos genere un archivo, y guarde ese registro en este. 
+Ahora para los SP de importancion se necesita una variable DirErr donde se proporcionara la ruta de donde se guardara este archivo
